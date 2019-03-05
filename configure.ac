@@ -125,6 +125,8 @@ AS_IF([test "x$enable_make" = "xyes" -o "x$enable_make_embedded" = "xyes"], [
       MAKE_="${MAKE_} (with libsass)"
       have_libsass=yes
       AC_DEFINE([USE_LIBSASS], [], [Build blogc-make with libsass support])
+    ], [
+      have_libsass=no
     ])
   ])
 ])
