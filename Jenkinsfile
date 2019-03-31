@@ -5,7 +5,7 @@ node {
             sh 'apk add --no-cache curl bash'
         }
         stage('Test') {
-            sh 'TRAVIS=true TARGET=distcheck curl -sSf https://yatr.rgm.io/run.sh | bash' 
+            sh 'curl -sSf https://yatr.rgm.io/run.sh | TRAVIS=true TARGET=distcheck bash' 
         }
     }
 }
